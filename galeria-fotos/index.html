@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"> <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css"> <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="style.css"> <!-- Seu CSS personalizado -->
+    <title>Galeria de Momentos</title>
+</head>
+<body>
+    <header class="bg-light py-4 shadow">
+        <div class="container text-center">
+            <h1>Galeria de Momentos</h1>
+            <nav>
+                <ul class="nav justify-content-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href=""><i class="bi bi-house"></i> Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="albums.html"><i class="bi bi-images"></i> Photos</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre"><i class="bi bi-info-circle"></i> About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#sobre"><i class="bi bi-heart"></i> Moments</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    
+    <main class="container my-4">
+        <section id="home">
+            <h2 class="text-center">Bem-vindo à nossa Galeria</h2>
+            <p class="text-center">Compartilhamos aqui os momentos especiais que vivemos juntos.</p>
+        </section>
+        <section id="galeria">
+            <h2 class="text-center">Nossa Galeria</h2>
+            <div id="drop-area" class="text-center">
+                <p>Arraste e solte suas imagens aqui ou clique para selecionar arquivos.</p>
+                <input type="file" id="fileElem" multiple accept="image/*" style="display:none;">
+                <label for="fileElem" class="drop-zone btn btn-primary">Clique para selecionar imagens</label>
+                <div class="gallery" id="gallery" class="d-flex flex-wrap justify-content-center mt-3"></div>
+            </div>
+        </section>
+        <section id="sobre">
+            
+        </section>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div class="container">
+            <div class="social-icons">
+                <a href="#"><i class="bi bi-facebook"></i></a>
+                <a href="#"><i class="bi bi-instagram"></i></a>
+                <a href="#"><i class="bi bi-twitter"></i></a>
+                <a href="#"><i class="bi bi-pinterest"></i></a>
+            </div>
+            <p>&copy; 2024 Galeria de Momentos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+    
+
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script> 
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script> 
+    <script src="script.js"></script>
+</body>
+</html>

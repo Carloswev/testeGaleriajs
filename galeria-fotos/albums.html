@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Galeria de Momentos</title>
+</head>
+<body>
+    <header>
+        <h1>Galeria de Momentos</h1>
+        <nav>
+            <ul>
+                <li><a href="#home">Home</a></li>
+                <li><a href="#galeria">Fotos</a></li>
+                <li><a href="#albuns">Álbuns</a></li>
+                <li><a href="#sobre">Sobre Nós</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section id="home">
+            <h2>Bem-vindo à nossa Galeria</h2>
+            <p>Compartilhamos aqui os momentos especiais que vivemos juntos.</p>
+        </section>
+        <section id="galeria">
+            <h2>Nossa Galeria</h2>
+            <div id="drop-area">
+                <p>Arraste e solte suas imagens aqui ou clique para selecionar arquivos.</p>
+                <input type="file" id="fileElem" multiple accept="image/*" style="display:none;">
+                <label for="fileElem" class="drop-zone">Clique para selecionar imagens</label>
+                <div class="gallery" id="gallery"></div>
+            </div>
+        </section>
+        <section id="albuns">
+            <h2>Meus Álbuns</h2>
+            <button id="add-album" class="btn btn-success">Adicionar Álbum</button>
+            <div id="album-list" class="d-flex flex-wrap justify-content-center mt-4"></div>
+        </section>
+        <section id="sobre">
+            <h2>Sobre Nós</h2>
+            <p>Esta galeria é um reflexo dos momentos que vivemos juntos. Cada foto tem uma história.</p>
+        </section>
+    </main>
+
+    <div id="modal" class="modal" onclick="closeModal()">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="modal-img">
+        <div id="caption"></div>
+    </div>
+
+    <footer>
+        <div>
+            <p>&copy; 2024 Galeria de Momentos. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
